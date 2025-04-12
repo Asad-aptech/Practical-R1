@@ -1,27 +1,31 @@
-let tries = 3;
-let answered = false;
+function validateForm() {
+    let email = document.getElementById("email").value;
+  
+    let username = document.getElementById("username").value;
+  
+    let password = document.getElementById("password").value;
 
-document.getElementById("startBtn").onclick = () => {
-    document.getElementById("startbox").style.display = "none";
-    document.getElementById("quizBox").style.display = "block";
-};
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
-const checkAnswer = (button, isCorrect) => {
-    if (answered || tries === 0) return;
+    let usernamePattern = /^[a-zA-Z0-9]{5,12}$/;
+  
+    let passwordPattern = /^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{6,}$/;
 
-    if (isCorrect) {
-        button.classList.add("correct");
-        answered = true;
-        disableAll();
-    } else {
-        button.classList.add("inCorrect");
-        tries--;
-        if (tries === 0) {
-            disableAll();
-        }
+    if (!emailPattern.test(email)) {
+        alert("Invalid email address");
+        return false;
     }
-};
 
-const disableAll = () => {
-    document.querySelectorAll("#quizBox .btn").forEach(btn => btn.disabled = true);
-};
+    if (!usernamePattern.test(username)) {
+        alert("Username must be 5-12 characters .");
+        return false;
+    }
+
+    if (!passwordPattern.test(password)) {
+        alert("Password must be at least 6 characters .");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
