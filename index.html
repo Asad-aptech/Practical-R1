@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="box" id="startbox">
+
+        <h2>Welcome!</h2>
+        <p>Name: Asad Ahmed</p>
+        <p>Father Name: Shakeel Ahmed</p>
+        <p>Student ID: 1578125</p>
+        <button id="startBtn" class="btn">Start Exam</button>
+
+    </div>
+
+
+    <div class="box" id="quizBox" style="display:none;">
+
+        <h3>What is HTML?</h3>
+       
+        <button class="btn" onclick="checkAnswer(this, false)">HomeTool Markup Language</button>
+
+        <button class="btn" onclick="checkAnswer(this, false)">HyperLink Markup Language</button>
+        
+        <button class="btn" onclick="checkAnswer(this, true)">HyperText Markup Language</button>
+       
+        <button class="btn" onclick="checkAnswer(this, false)">Hypercheck Markup Language</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
