@@ -1,0 +1,40 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 50px;
+    background-color: antiquewhite;
+}
+
+.box {
+    background-color: azure;
+    width: 500px;
+    height: 400px;
+    padding-top: 20px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px, 0;
+    border: none;
+    background-color: beige;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: bisque;
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.inCorrect {
+    background-color: red;
+    color: white;
+
+}
