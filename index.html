@@ -4,39 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div>
+        <h2>Registration Form</h2>
 
-    <div class="box" id="startbox">
+        <form onsubmit="return validateForm()">
 
-        <h2>Welcome!</h2>
-        <p>Name: Asad Ahmed</p>
-        <p>Father Name: Shakeel Ahmed</p>
-        <p>Student ID: 1578125</p>
-        <button id="startBtn" class="btn">Start Exam</button>
+            <label>Email:</label><br>
+            <input type="text" id="email"><br><br>
 
-    </div>
+            <label>Username:</label><br>
+            <input type="text" id="username"><br><br>
 
+            <label>Password:</label><br>
+            <input type="password" id="password"><br><br>
 
-    <div class="box" id="quizBox" style="display:none;">
+            <input class="btn" type="submit" value="Submit">
 
-        <h3>What is HTML?</h3>
-       
-        <button class="btn" onclick="checkAnswer(this, false)">HomeTool Markup Language</button>
-
-        <button class="btn" onclick="checkAnswer(this, false)">HyperLink Markup Language</button>
-        
-        <button class="btn" onclick="checkAnswer(this, true)">HyperText Markup Language</button>
-       
-        <button class="btn" onclick="checkAnswer(this, false)">Hypercheck Markup Language</button>
-
+        </form>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
